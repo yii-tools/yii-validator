@@ -30,7 +30,7 @@ final class ValidatorTest extends TestCase
                     'This value is not a valid email address.',
                 ],
                 'integer' => [
-                    'Value must be no less than 1.'
+                    'Value must be no less than 1.',
                 ],
                 'url' => [
                     'Value cannot be blank.',
@@ -60,7 +60,7 @@ final class ValidatorTest extends TestCase
                     'This value is not a valid email address.',
                 ],
                 'integer' => [
-                    'Value must be no less than 1.'
+                    'Value must be no less than 1.',
                 ],
                 'url' => [
                     'Value cannot be blank.',
