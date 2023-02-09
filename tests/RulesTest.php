@@ -14,7 +14,7 @@ use Yiisoft\Validator\Rule\Regex;
 use Yiisoft\Validator\Rule\Required;
 use Yiisoft\Validator\Rule\Url;
 
-final class RuleTest extends TestCase
+final class RulesTest extends TestCase
 {
     public function testRule(): void
     {

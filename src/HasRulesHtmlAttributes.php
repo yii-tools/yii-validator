@@ -13,8 +13,8 @@ trait HasRulesHtmlAttributes
 {
     use CanBeLength;
     use CanBeNumber;
-    use CanBeRequired;
     use CanBeRegex;
+    use CanBeRequired;
     use CanBeUrl;
     use HasRules;
 

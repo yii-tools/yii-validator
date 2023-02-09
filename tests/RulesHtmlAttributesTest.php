@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 use Yii\Validator\Tests\Support\ValidatorForm;
 use Yii\Validator\Tests\Support\ValidatorFormAttributes;
 
-final class RuleHtmlAttributesTest extends TestCase
+final class RulesHtmlAttributesTest extends TestCase
 {
     public function testGetRuleHtmlAttributes(): void
     {
