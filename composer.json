@@ -1,15 +1,22 @@
 {
-    "name": "yii-tools/template",
+    "name": "yii-tools/yii-validator",
     "type": "library",
-    "description": "_____",
+    "description": "Trait to implement Yii Validator in Form Model for YiiFramework v.3.0.",
     "keywords": [
-        "_____"
+        "yii-tools",
+        "form-model",
+        "yii-validator",
+        "yii3"
     ],
     "license": "mit",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "ext-intl": "*",
+        "yii-tools/form-model": "^1.0",
+        "yii-tools/html": "^1.0",
+        "yiisoft/validator": "^3.0@dev"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^4.3",
@@ -19,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Template\\": "src"
+            "Yii\\Validator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Template\\Tests\\": "tests"
+            "Yii\\Validator\\Tests\\": "tests"
         }
     },
     "extra": {
