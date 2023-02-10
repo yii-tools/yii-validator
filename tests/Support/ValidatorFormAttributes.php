@@ -11,6 +11,7 @@ use Yiisoft\Validator\Rule\Length;
 use Yiisoft\Validator\Rule\Number;
 use Yiisoft\Validator\Rule\Regex;
 use Yiisoft\Validator\Rule\Required;
+use Yiisoft\Validator\Rule\StopOnError;
 use Yiisoft\Validator\Rule\Url;
 
 final class ValidatorFormAttributes extends AbstractFormModel
@@ -26,6 +27,7 @@ final class ValidatorFormAttributes extends AbstractFormModel
     #[Required, Url]
     private string $url = '';
     private string $username = '';
+    #[StopOnError([new Required(), new Regex('/^[a-z]+$/')])]
     private string $server = '';
     private string $textArea = '';
 }

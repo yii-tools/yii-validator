@@ -5,15 +5,23 @@ declare(strict_types=1);
 namespace Yii\Validator;
 
 use Yii\FormModel\FormModelError;
+use Yiisoft\Validator\Helper\ObjectParser;
 use Yiisoft\Validator\Result;
 use Yiisoft\Validator\ValidatorInterface;
 
 trait HasValidate
 {
-    use HasRules;
-    use HasRulesHtmlAttributes;
-
     abstract public function error(): FormModelError;
+
+    public function getRules(): array
+    {
+        return (new ObjectParser($this))->getRules();
+    }
+
+    public function getRuleHtmlAttributes(object $formModel, string $attribute): array
+    {
+        return (new RulesHtmlParser())->getRuleHtmlAttributes($formModel, $attribute);
+    }
 
     public function validate(ValidatorInterface $validator): bool
     {
