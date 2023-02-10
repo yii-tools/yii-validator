@@ -41,6 +41,16 @@ final class RulesHtmlAttributesTest extends TestCase
             $formModel->getRuleHtmlAttributes($formModel, 'integer'),
         );
 
+        // property server
+        $this->assertSame(
+            [
+                'required' => true,
+                'pattern' => '^[a-z]+$',
+
+            ],
+            $formModel->getRuleHtmlAttributes($formModel, 'server'),
+        );
+
         // property url
         $this->assertSame(
             [
@@ -80,6 +90,16 @@ final class RulesHtmlAttributesTest extends TestCase
                 'min' => 1,
             ],
             $formModel->getRuleHtmlAttributes($formModel, 'integer'),
+        );
+
+        // property server
+        $this->assertSame(
+            [
+                'required' => true,
+                'pattern' => '^[a-z]+$',
+
+            ],
+            $formModel->getRuleHtmlAttributes($formModel, 'server'),
         );
 
         // property url

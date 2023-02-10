@@ -11,6 +11,7 @@ use Yiisoft\Validator\Rule\Length;
 use Yiisoft\Validator\Rule\Number;
 use Yiisoft\Validator\Rule\Regex;
 use Yiisoft\Validator\Rule\Required;
+use Yiisoft\Validator\Rule\StopOnError;
 use Yiisoft\Validator\Rule\Url;
 
 final class ValidatorForm extends AbstractFormModel
@@ -31,6 +32,7 @@ final class ValidatorForm extends AbstractFormModel
             'amount' => [new Required(), new Length(min: 1, max: 10), new Regex('/^[0-9]+$/')],
             'email' => [new Required(), new Email()],
             'integer' => [new Required(), new Number(min: 1, max: 10)],
+            'server' => [new StopOnError([new Required(), new Regex('/^[a-z]+$/')])],
             'url' => [new Required(), new Url()],
         ];
     }
