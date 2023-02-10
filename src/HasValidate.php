@@ -7,12 +7,16 @@ namespace Yii\Validator;
 use Yii\FormModel\FormModelError;
 use Yiisoft\Validator\Helper\ObjectParser;
 use Yiisoft\Validator\Result;
+use Yiisoft\Validator\RuleInterface;
 use Yiisoft\Validator\ValidatorInterface;
 
 trait HasValidate
 {
     abstract public function error(): FormModelError;
 
+    /**
+     * @psalm-return array<int|string, RuleInterface|list<RuleInterface>>
+     */
     public function getRules(): array
     {
         return (new ObjectParser($this))->getRules();
