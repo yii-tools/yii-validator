@@ -46,7 +46,6 @@ final class RulesHtmlAttributesTest extends TestCase
             [
                 'required' => true,
                 'pattern' => '^[a-z]+$',
-
             ],
             $formModel->getRuleHtmlAttributes($formModel, 'server'),
         );
@@ -97,7 +96,6 @@ final class RulesHtmlAttributesTest extends TestCase
             [
                 'required' => true,
                 'pattern' => '^[a-z]+$',
-
             ],
             $formModel->getRuleHtmlAttributes($formModel, 'server'),
         );

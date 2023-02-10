@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Yii\Validator;
 
-use ReflectionAttribute;
-use ReflectionObject;
 use Yii\Html\Helper\Utils;
 use Yiisoft\Validator\Rule\Composite;
 use Yiisoft\Validator\Rule\Length;
