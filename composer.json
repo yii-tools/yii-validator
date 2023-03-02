@@ -16,7 +16,7 @@
         "ext-intl": "*",
         "yii-tools/form-model": "^1.0",
         "yii-tools/html": "^1.0",
-        "yiisoft/validator": "^3.0@dev"
+        "yiisoft/validator": "^1.0"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^4.3",
