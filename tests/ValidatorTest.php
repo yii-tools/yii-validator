@@ -32,6 +32,9 @@ final class ValidatorTest extends TestCase
                 'integer' => [
                     'Value must be no less than 1.',
                 ],
+                'server' => [
+                    0 => 'Value cannot be blank.',
+                ],
                 'url' => [
                     'Value cannot be blank.',
                     'This value is not a valid URL.',
@@ -65,6 +68,9 @@ final class ValidatorTest extends TestCase
                 'url' => [
                     'Value cannot be blank.',
                     'This value is not a valid URL.',
+                ],
+                'server' => [
+                    0 => 'Value cannot be blank.',
                 ],
             ],
             $formModel->error()->getAll()
